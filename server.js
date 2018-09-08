@@ -2,7 +2,7 @@
 
  var app = express()
 
- app.use(express.static(__dirname));
+ app.use(express.static(__dirname)); //becasue we are using static files
 
  var messages = [
      {
@@ -15,6 +15,7 @@
     }
  ]
 
+ //goto localhost/messages
  app.get('/messages',(req,res)=>{
      res.send(messages);
  })
